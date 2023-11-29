@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>إمارة المنطقة الشرقية</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@700&display=swap" rel="stylesheet">
+	<style>
+		*
+		{
+			box-sizing: border-box;
+			font-family: 'Tajawal', sans-serif;
+		}
+		::selection
+	    {
+            background-color: #b3d4fc;
+            color: #000;
+            text-shadow: none;
+        }
+		html
+		{
+			scroll-behavior: smooth;
+		}
+		body
+		{
+			margin: 0px;
+			background-color: #fff9f1;
+			direction: rtl;
+		}
+		header
+		{
+			background-color: #fff;
+			padding: 20px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		.logo
+		{
+			width: 120px;
+			vertical-align: middle;
+		}
+		.logo-bar
+		{
+			margin-left: 50px;
+		}
+		.menu
+		{
+			list-style-type: none;
+			padding: 0px;
+			display: flex;
+			flex-direction: row;
+		}
+		.menu-link
+		{
+			color: #008050;
+			text-decoration: none;
+			padding: 20px;
+			font-size: 18px;
+			transition: .3s;
+		}
+		.menu-link:hover
+		{
+			color: #e69500;
+		}
+		.fst
+		{
+			background-color: #fff;
+			padding: 10px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		.button
+		{
+			color: #fff;
+			text-decoration: none;
+			background-color: #008050;
+			border-radius: 30px;
+			background-size: 100%;
+			transition: .3s;
+			font-size: 18px;
+			padding: 12px 15px;
+			font-family: 'Tajawal', sans-serif;
+		}
+		.button:hover
+		{
+			background-color: #00b16e;
+		}
+		.login-bar
+		{
+			margin-left: 600px;
+		}
+		.field
+		{
+			border: unset;
+			font-size: 18px;
+			padding: 5px 30px 5px 0px;
+		}
+		.news-link
+		{
+			color: #024600;
+			text-decoration: none;
+			transition: .3s;
+		}
+		.news-link:hover
+		{
+			color: red;
+		}
+		.fasel
+		{
+			margin: 0px 40px;
+			color: #020;
+		}
+		.news-bar
+		{
+			display: flex;
+			flex-direction: row;
+		}
+		.news-but
+		{
+			width: 200px;
+			padding: 20px;
+			background-image: linear-gradient(to right, #008050, #008050);
+			text-align: center;
+			color: #fff;
+		}
+		.news
+		{
+			padding: 20px;
+			box-shadow: inset 0px 0px 5px #b3b3b3;
+		}
+		.banner
+		{
+			background-image: url(back.jpg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			height: 700px;
+			color: #fff;
+		}
+		.head
+		{
+			margin: 0px;
+			font-family: 'Harmattan', sans-serif;
+			font-size: 80px;
+		}
+		.art
+		{
+			margin: 0px;
+			width: 500px;
+			font-size: 20px;
+		}
+		.fet
+		{
+			text-align: center;
+		}
+		.over
+		{
+			background-color: #0009;
+			height: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.action
+		{
+			text-decoration: none;
+			background-image: linear-gradient(to top, #025536, #00bb74);
+			color: #fff;
+			padding: 20px;
+			border-radius: 30px;
+			background-size: 100%;
+			margin-left: 0px;
+		}
+		.action:hover
+		{
+			animation-name: margi;
+			animation-duration: .1s;
+			animation-iteration-count: 3;
+			animation-timing-function: linear;
+		}
+		@keyframes margi {
+			25% {margin-left: 0px;}
+			50% {margin-left: 20px;}
+			75% {margin-left: -20px;}
+			100% {margin-left: 0px;}
+		}
+		.mar
+		{
+			margin: 40px 0px;
+		}
+		.marg
+		{
+			margin: 200px 0px 100px 0px;
+		}
+		.sml
+		{
+			font-size: 40px;
+			display: inline-block;
+		}
+		.lino
+		{
+			display: inline-block;
+			vertical-align: center;
+			width: 300px;
+			margin-left: 20px;
+			border: unset;
+			height: 3px;
+			background-image: linear-gradient(to right, #00ff9f, #2f0);
+		}
+		.elect
+		{
+			margin: 0px 0px 100px 0px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			color: #000;
+			background-image: linear-gradient(110deg, #f2f2f2 52%, #f2f2f2 0%, #008050 0%, #008050);
+			padding: 100px 0px;
+		}
+		.card
+		{
+			width: 330px;
+			height: 450px;
+			background-image: linear-gradient(140deg, #000 15%, #000 0%, #fff 0%, #fff);
+			margin: 0px 20px;
+			border-radius: 0px 30px 30px 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			box-shadow: 0px 0px 5px;
+		}
+		.sec-head
+		{
+			font-family: 'Harmattan', sans-serif;
+			font-size: 25px;
+		}
+		.list
+		{
+			padding-right: 0px;
+			list-style-image: url(arrow.png);
+		}
+		.list-item
+		{
+			transition: .3s;
+			padding: 10px;
+		}
+		.lko
+		{
+			margin: 20px 0px;
+		}
+		.fel
+		{
+			font-size: 18px;
+			padding: 5px;
+			border: solid 1px;
+			border-radius: 10px;
+		}
+		.buttton
+		{
+			text-decoration: none;
+			color: #000;
+			background-color: #fff;
+			padding: 15px;
+			border-radius: 30px;
+			border: unset;
+			transition: .3s;
+			cursor: pointer;
+			box-shadow: 0px 0px 10px;
+		}
+		.buttton:hover
+		{
+			box-shadow: 0px 0px 5px;
+		}
+		.list-link
+		{
+			text-decoration: none;
+			color: #000;
+			text-shadow: 2px 2px 3px green;
+			transition: .3s;
+			padding: 10px;
+		}
+		.list-item:hover
+		{
+			margin-right: 10px;
+		}
+		.imglo
+		{
+			vertical-align: middle;
+			margin-left: 10px;
+		}
+		.no
+		{
+			margin: 0px;
+		}
+		.govern
+		{
+			width: 300px;
+			height: 300px;
+			margin: 20px;
+			display: inline-table;
+			border-radius: 30px;
+			border: solid 1px grey;
+			padding: 20px;
+			text-align: center;
+			background-image: linear-gradient(360deg, #f2f2f2 80%, #f2f2f2 0%, #008050 0%, #008050);
+		}
+		.lo
+		{
+			padding: 20px;
+			margin-bottom: 100px;
+			background-color: unset;
+			box-shadow: unset;
+		}
+		.gov-img
+		{
+			vertical-align: middle;
+			border-radius: 20px;
+			width: 240px;
+			height: 150px;
+		}
+		.end
+		{
+			text-align: center;
+			padding: 15px;
+			background-color: #00272b;
+			color: #fff;
+		}
+		.hor
+		{
+			height: 50px;
+			background-image: linear-gradient(to bottom, #00ff9f, #2f0);
+			width: 4px;
+			margin: 0px auto;
+			border-radius: 30px;
+		}
+		.act
+		{
+			text-align: center;
+			background-image: linear-gradient(250deg, #f2f2f2 50%, #f2f2f2 0%, #008050 0%, #008050);
+			padding: 100px;
+		}
+		.widj
+		{
+			padding: 20px;
+			background-color: #01383e;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		.en
+		{
+			width: 49%;
+			height: auto;
+			padding: 15px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		.soc
+		{
+			text-decoration: none;
+			color: #000;
+			margin: 15px;
+			font-size: 22px;
+			border-radius: 30px;
+			background-color: #fff;
+			width: 40px;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			height: 40px;
+		}
+		.iop
+		{
+			text-align: right;
+		}
+		.vid
+		{
+			width: 1000px;
+			height: 600px;
+			border-radius: 30px;
+			box-shadow: 0px 0px 10px;
+		}
+		.top
+{
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 13px 14px;
+    border: unset;
+    box-shadow: 0px 0px 10px rgb(94, 94, 94);
+    font-size: 22px;
+    color: #000;
+    text-decoration: none;
+    position: fixed;
+    right: 30px;
+    bottom: 90px;
+    cursor: pointer;
+    transition: .3s;
+}
+.top:hover
+{
+    background-color: black;
+    color: #fff;
+}
+	</style>
+</head>
+<body>
+	<a href="#" class="top fa fa-chevron-up"></a>
+<div class="fst">
+	<div class="login-bar">
+		<a href="#" class="button"><img src="https://img.icons8.com/metro/26/ffffff/login-rounded-right.png" class="imglo" />تسجيل الدخول </a>
+	</div>
+	<div class="search-bar">
+		<input type="text" name="search" class="field" placeholder="أكتب كلمة البحث">
+		<button class="button" style="border: unset;cursor: pointer;"><img src="https://img.icons8.com/android/24/ffffff/search.png" class="imglo no" /></button>
+	</div>
+</div>
+<header>
+	<div class="logo-bar">
+		<img src="download.png" class="logo">
+	</div>
+	<div class="menu-bar">
+		<ul class="menu">
+			<li class="menu-item"><a href="#" class="menu-link"><span class="icon fa fa-home"> </span> الرئيسية </a></li>
+			<li class="menu-item"><a href="#" class="menu-link"><span class="icon fa fa-rss"> </span> الاخبار </a></li>
+			<li class="menu-item"><a href="#" class="menu-link"><span class="icon fa fa-leaf"> </span> خدمات المستفيدين</a></li>
+			<li class="menu-item"><a href="#" class="menu-link"><span class="icon fa fa-check"> </span> خدمات الموردين</a></li>
+			<li class="menu-item"><a href="#" class="menu-link"><span class="icon fa fa-id-card"> </span> عن الامارة</a></li>
+			<li class="menu-item"><a href="#" class="menu-link"><span class="icon fa fa-comments"> </span> تواصل معنا</a></li>
+		</ul>
+	</div>
+</header>
+<div class="news-bar">
+	<span class="news-but">أخبار عاجلة</span>
+	<marquee class="news" direction="right" scrollamount="1" truespeed behavior="scroll" scrolldelay="6" hspace="0" onmouseover="this.stop();" onmouseout="this.start();">
+		<span class="fasel fa fa-check-circle"></span><a href="#" class="news-link">وزارة الحج السعودية: الأولوية لمن لم يسبق لهم أداء الفريضة </a><span class="fasel fa fa-check-circle"></span>
+		<a href="#" class="news-link">وزير الصحة السعودى: التطعيم ولو بجرعة واحدة شرط أساسى للحج هذا العام </a><span class="fasel fa fa-check-circle"></span>
+		<a href="#" class="news-link">السعودية تبدأ تمديد إقامات الوافدين المتواجدين خارج المملكة حتى 31 يوليو</a><span class="fasel fa fa-check-circle"></span>
+		<a href="#" class="news-link">التليفزيون السعودى: تعطل مفاجئ لنظام التداول فى سوق الأسهم</a><span class="fasel fa fa-check-circle"></span>
+		<a href="#" class="news-link">السعودية تصدر تعميما برفع قيود السفر للقادمين من 11 دولة</a><span class="fasel fa fa-check-circle"></span>
+	</marquee>
+</div>
+<div class="banner">
+	<div class="over">
+	<div class="fet">
+		<h1 class="head">مرحبا بكم</h1>
+	    <p class="art">أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ</p>
+	    <div class="mar"><a href="#" class="action">الذهاب الان</a></div>
+	</div>
+</div>
+</div>
+<div class="marg">
+	<hr class="lino"><h2 class="head sml">الخدمات الإلكترونية</h2>
+</div>
+<div class="elect">
+	<div class="card">
+		<span class="elec-icon"></span>
+		<h2 class="sec-head">الخدمات الإلكترونية</h2>
+		<ul class="list">
+			<li class="list-item"><a href="#" class="list-link">خدمات الشئون الصحية</a></li>
+			<li class="list-item"><a href="#" class="list-link">خدمات شئون السجناء</a></li>
+			<li class="list-item"><a href="#" class="list-link">خدمات حقوقية</a></li>
+			<li class="list-item"><a href="#" class="list-link">خدمات المطالبات الخاصة</a></li>
+			<li class="list-item"><a href="#" class="list-link">خدمات العقار</a></li>
+			<li class="list-item"><a href="#" class="list-link">خدمات الزواج</a></li>
+		</ul>
+	</div>
+	<div class="card">
+		<span class="elec-icon"></span>
+		<h2 class="sec-head">الإستعلام عن معاملة</h2>
+		<ul class="list">
+			<li class="list-item"><a href="#" class="list-link">الإستعلام عن طريق رقم المعاملة</a></li>
+			<li class="list-item"><a href="#" class="list-link">الإستعلام عن طريق رقم الخطاب</a></li>
+		</ul>
+	</div>
+	<div class="card">
+		<span class="elec-icon"></span>
+		<h2 class="sec-head">التعديل على معاملة</h2>
+		<label class="lko">
+			<span class="labe">رقم الطلب</span><br><br>
+			<input type="number" name="num" class="fel" placeholder="رقم الطلب">
+		</label>
+		<label class="lko">
+			<span class="labe">كلمة المرور</span><br><br>
+			<input type="password" name="pas" class="fel" placeholder="كلمة المرور">
+		</label>
+		<input type="submit" value="تعديل الان" name="sub" class="buttton">
+	</div>
+</div>
+<div class="marg">
+	<hr class="lino"><h2 class="head sml">الأنشطة</h2>
+</div>
+<div class="act"><iframe width="789" height="444" src="https://www.youtube.com/embed/XEV9NTQZrHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vid"></iframe></div>
+<div class="marg">
+	<hr class="lino"><h2 class="head sml">المحافظات</h2>
+</div>
+<div class="gov">
+	<marquee class="news lo" direction="right" scrollamount="1" truespeed behavior="scroll" scrolldelay="20" hspace="0" onmouseover="this.stop();" onmouseout="this.start();">
+		<div class="govern">
+			<img src="gov1.jpg" class="gov-img">
+			<div class="hor"></div>
+			<h2 class="sec-head">اسم المحافظة</h2>
+			<p class="cap">أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ</p>
+		</div>
+		<div class="govern">
+			<img src="gov2.jpg" class="gov-img">
+			<div class="hor"></div>
+			<h2 class="sec-head">اسم المحافظة</h2>
+			<p class="cap">أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ</p>
+		</div>
+		<div class="govern">
+			<img src="gov3.jpg" class="gov-img">
+			<div class="hor"></div>
+			<h2 class="sec-head">اسم المحافظة</h2>
+			<p class="cap">أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ</p>
+		</div>
+		<div class="govern">
+			<img src="gov4.jpg" class="gov-img">
+			<div class="hor"></div>
+			<h2 class="sec-head">اسم المحافظة</h2>
+			<p class="cap">أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ</p>
+		</div>
+		<div class="govern">
+			<img src="gov5.jpg" class="gov-img">
+			<div class="hor"></div>
+			<h2 class="sec-head">اسم المحافظة</h2>
+			<p class="cap">أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ</p>
+		</div>
+		<div class="govern">
+			<img src="gov6.jpg" class="gov-img">
+			<div class="hor"></div>
+			<h2 class="sec-head">اسم المحافظة</h2>
+			<p class="cap">أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ</p>
+		</div>
+		<div class="govern">
+			<img src="gov7.jpg" class="gov-img">
+			<div class="hor"></div>
+			<h2 class="sec-head">اسم المحافظة</h2>
+			<p class="cap">أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ</p>
+		</div>
+		<div class="govern">
+			<img src="gov8.jpg" class="gov-img">
+			<div class="hor"></div>
+			<h2 class="sec-head">اسم المحافظة</h2>
+			<p class="cap">أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ</p>
+		</div>
+		<div class="govern">
+			<img src="gov9.jpg" class="gov-img">
+			<div class="hor"></div>
+			<h2 class="sec-head">اسم المحافظة</h2>
+			<p class="cap">أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ</p>
+		</div>
+		<div class="govern">
+			<img src="gov10.jpg" class="gov-img">
+			<div class="hor"></div>
+			<h2 class="sec-head">اسم المحافظة</h2>
+			<p class="cap">أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ أبجد هوز حطي كلمن سعفص قرشت ثخذ وضظغ</p>
+		</div>
+	</marquee>
+</div>
+<div class="widj">
+	<div class="en iop">
+		<img src="download.png" style="vertical-align: middle;width: 150px;">
+	</div>
+	<div class="en">
+		<h2 class="sec-head" style="color: #fff;font-size: 50px;">تابعنا : </h2>
+		<div class="social">
+			<a href="#" class="soc fa fa-facebook"></a>
+			<a href="#" class="soc fa fa-instagram"></a>
+			<a href="#" class="soc fa fa-twitter"></a>
+		</div>
+	</div>
+</div>
+<footer class="end">Copywrite 2020 &copy; All Right Reserved</footer>
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 25,
+		speed: 400
+	});
+</script>
+</body>
+</html>
